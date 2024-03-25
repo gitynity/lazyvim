@@ -50,6 +50,16 @@ map(
 vim.api.nvim_set_keymap("n", "d", '"_d', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "D", '"_D', { noremap = true, silent = true })
 
+-- Close current buffer
+vim.api.nvim_set_keymap("n", "<S-Down>", ":bd<CR>", { noremap = true, silent = true })
+
+-- Go to next buffer
+vim.api.nvim_set_keymap("n", "<S-Right>", ":bn<CR>", { noremap = true, silent = true })
+
+-- Go to previous buffer
+vim.api.nvim_set_keymap("n", "<S-Left>", ":bp<CR>", { noremap = true, silent = true })
+
+
 -- Custom mappings using leader key ==> leader d = cut
 vim.api.nvim_set_keymap("n", "<leader>d", '""d', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>D", '""D', { noremap = true, silent = true })
